@@ -1,0 +1,49 @@
+{
+	"name": "krohn-labs_text-analyzer",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint",
+		"typecheck": "next typegen && tsc --noEmit",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "node --env-file-if-exists=.env.local --env-file-if-exists=.env node_modules/drizzle-kit/bin.cjs migrate",
+		"jobs:dev": "inngest-cli dev -u http://localhost:3000/api/inngest",
+		"hash-password": "tsx scripts/hash-password.ts",
+		"fmt": "vp fmt",
+		"fmt:check": "vp fmt --check",
+		"test": "vp test",
+		"check": "pnpm fmt:check && pnpm lint && pnpm typecheck && pnpm test"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.2.0",
+		"cheerio": "^1.2.0",
+		"drizzle-orm": "^0.45.4",
+		"fast-xml-parser": "^5.11.2",
+		"inngest": "^4.24.0",
+		"jsonrepair": "^3.15.0",
+		"next": "16.4.1",
+		"next-auth": "5.0.0-beta.32",
+		"react": "19.3.0",
+		"react-dom": "19.3.0",
+		"undici": "^7.30.1",
+		"zod": "^4.6.7"
+	},
+	"devDependencies": {
+		"@tailwindcss/turbopack": "^4",
+		"@types/node": "^22.20.5",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"drizzle-kit": "^0.31.11",
+		"eslint": "^9",
+		"eslint-config-next": "16.4.1",
+		"inngest-cli": "^1.46.0",
+		"tailwindcss": "^4",
+		"tsx": "^4.23.15",
+		"typescript": "^5",
+		"vite-plus": "1.2.0"
+	},
+	"packageManager": "pnpm@10.28.2"
+}

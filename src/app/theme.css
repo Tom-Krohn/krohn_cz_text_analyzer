@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	color-scheme: dark;
+	--accent: #7568cf;
+	--accent-button-hover: #5f50b5;
+	--accent-hover: #8478da;
+	--background: #0b0f13;
+	--foreground: #f0f2ed;
+	--line: #2b343b;
+	--muted: #a0abb0;
+	--sidebar: #0e1317;
+	--success: #79bd9d;
+	--surface: #131a1f;
+	--surface-raised: #1a2329;
+}
+
+:root[data-theme="light"] {
+	color-scheme: light;
+	--accent: #675bb8;
+	--accent-button-hover: #51429c;
+	--accent-hover: #5147a4;
+	--background: #f5f7f5;
+	--foreground: #202825;
+	--line: #d9e0dc;
+	--muted: #56645e;
+	--sidebar: #edf1ee;
+	--success: #23754f;
+	--surface: #ffffff;
+	--surface-raised: #edf1ee;
+}
+
+@theme inline {
+	--color-accent: var(--accent);
+	--color-accent-button-hover: var(--accent-button-hover);
+	--color-accent-hover: var(--accent-hover);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-line: var(--line);
+	--color-muted: var(--muted);
+	--color-sidebar: var(--sidebar);
+	--color-success: var(--success);
+	--color-surface: var(--surface);
+	--color-surface-raised: var(--surface-raised);
+	--font-sans: var(--font-nunito);
+	--font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+	font-feature-settings: "ss01" on;
+	font-variant-numeric: tabular-nums;
+}
+
+:where(a[href], button:not(:disabled), summary, [role="button"]) {
+	cursor: pointer;
+}
+
+:where(button:disabled, [aria-disabled="true"]) {
+	cursor: not-allowed;
+}
+
+::selection {
+	background-color: color-mix(in srgb, var(--accent) 45%, transparent);
+	color: var(--foreground);
+}

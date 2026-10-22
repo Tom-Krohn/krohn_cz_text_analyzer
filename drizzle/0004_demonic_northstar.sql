@@ -1,0 +1,1 @@
+ALTER TYPE "public"."ai_analysis_stage" ADD VALUE 'proposal_decision';

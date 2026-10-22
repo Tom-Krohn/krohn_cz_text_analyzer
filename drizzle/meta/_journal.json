@@ -1,0 +1,41 @@
+{
+	"version": "7",
+	"dialect": "postgresql",
+	"entries": [
+		{
+			"idx": 0,
+			"version": "7",
+			"when": 1792091448566,
+			"tag": "0000_initial",
+			"breakpoints": true
+		},
+		{
+			"idx": 1,
+			"version": "7",
+			"when": 1792091672996,
+			"tag": "0001_auth_and_login_limits",
+			"breakpoints": true
+		},
+		{
+			"idx": 2,
+			"version": "7",
+			"when": 1792129014059,
+			"tag": "0002_batch_jobs",
+			"breakpoints": true
+		},
+		{
+			"idx": 3,
+			"version": "7",
+			"when": 1792603966283,
+			"tag": "0003_blue_queen_noir",
+			"breakpoints": true
+		},
+		{
+			"idx": 4,
+			"version": "7",
+			"when": 1792604222587,
+			"tag": "0004_demonic_northstar",
+			"breakpoints": true
+		}
+	]
+}
